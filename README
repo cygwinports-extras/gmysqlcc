@@ -1,0 +1,78 @@
+gmysqlcc
+------------------------------------------
+gMySQLcc is a GTK+ client for mysql databases.
+
+Runtime requirements:
+  cygwin-1.5.24-2
+  glib2-2.12.9-1
+  gtk2-x11-2.10.9-1
+  gtksourceview-1.8.4-1
+  libintl8-0.15-1
+  libmysqlclient15-5.0.27-1
+  pango-1.14.10-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.24-1
+  autoconf2.5-2.61-1
+  automake1.9-1.9.6-2
+  binutils-20060817-1
+  cygport-0.2.11-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  make-3.81-1
+  pkg-config-0.21-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://gmysqlcc.thepozer.org/cgi-bin/trac.cgi/wiki/WikiStart
+
+Canonical download:
+  http://ftp.thepozer.org/gmysqlcc/
+
+-------------------------------------------
+
+Build instructions:
+  unpack gmysqlcc-0.2.6-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./gmysqlcc-0.2.6-X.cygport all
+
+This will create:
+  /usr/src/gmysqlcc-0.2.6-X-src.tar.bz2
+  /usr/src/gmysqlcc-0.2.6-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/bin/gmysqlcc.exe
+  /usr/share/applications/gmysqlcc.desktop
+  /usr/share/doc/Cygwin/gmysqlcc-0.2.6.README
+  /usr/share/doc/gmysqlcc-0.2.6/ABOUT-NLS
+  /usr/share/doc/gmysqlcc-0.2.6/AUTHORS
+  /usr/share/doc/gmysqlcc-0.2.6/COPYING
+  /usr/share/doc/gmysqlcc-0.2.6/ChangeLog
+  /usr/share/doc/gmysqlcc-0.2.6/INSTALL
+  /usr/share/doc/gmysqlcc-0.2.6/NEWS
+  /usr/share/doc/gmysqlcc-0.2.6/README
+  /usr/share/doc/gmysqlcc-0.2.6/TODO
+  /usr/share/locale/es/LC_MESSAGES/gmysqlcc.mo
+  /usr/share/locale/fr/LC_MESSAGES/gmysqlcc.mo
+  /usr/share/locale/uk/LC_MESSAGES/gmysqlcc.mo
+  /usr/share/pixmaps/gmysqlcc-16.png
+  /usr/share/pixmaps/gmysqlcc-32.png
+  /usr/share/pixmaps/gmysqlcc-48.png
+  /usr/share/pixmaps/gmysqlcc-64.png
+
+------------------
+
+Port Notes:
+
+----- version 0.2.6-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
