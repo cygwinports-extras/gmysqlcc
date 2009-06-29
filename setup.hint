@@ -1,4 +1,4 @@
 category: Database Gnome
-requires: cygwin glib2 gtk2-x11 gtksourceview2 libintl8 libmysqlclient15 pango
+requires: glib2 gtk2-x11 gtksourceview2 libintl8 libmysqlclient15 pango
 sdesc: "GTK+ MySQL client"
 ldesc: "gMySQLcc is a GTK+ client for mysql databases."
