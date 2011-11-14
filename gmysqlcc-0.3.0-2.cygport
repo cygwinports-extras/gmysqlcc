@@ -1,22 +1,20 @@
 inherit gnome2
 
 DESCRIPTION="GTK+ MySQL client"
-HOMEPAGE="http://gmysqlcc.thepozer.org/cgi-bin/trac.cgi/wiki/WikiStart"
-SRC_URI="http://ftp.thepozer.org/${PN}/${P}.tar.gz"
+HOMEPAGE="http://gmysqlcc.thepozer.com/projet-gmysqlcc/"
+SRC_URI="http://ftp.thepozer.com/${PN}/${P}.tar.gz"
 
 CYGCONF_ARGS+=" --with-gtksourceview"
 
 src_install() {
 	cd ${B}
-	cyginstall ${PN}docdir=/usr/share/doc/${P}
+	cyginstall ${PN}docdir="\$(docdir)" icon_DATA=
 
 	for res in 16 32 48 64
 	do
 		insinto /usr/share/icons/hicolor/${res}x${res}/apps
-		newins ${D}/usr/share/pixmaps/${PN}-${res}.png ${PN}.png
+		newins ${S}/data/${PN}-${res}.png ${PN}.png
 	done
-
-	rm -fr ${D}/usr/share/pixmaps
 
 	sed -e 's|^Icon=.*|Icon=gmysqlcc|' \
 		-i ${D}/usr/share/applications/${PN}.desktop
