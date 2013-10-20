@@ -1,0 +1,27 @@
+inherit gnome2
+
+NAME="gmysqlcc"
+VERSION=0.3.0
+RELEASE=2
+CATEGORY="Database"
+SUMMARY="GTK+ MySQL client"
+DESCRIPTION="gMySQLcc is a GTK+ client for mysql databases."
+HOMEPAGE="http://gmysqlcc.thepozer.com/projet-gmysqlcc/"
+SRC_URI="http://ftp.thepozer.com/gmysqlcc/${NAME}-${VERSION}.tar.gz"
+PATCH_URI="0.3.0-cflags.patch"
+
+CYGCONF_ARGS+=" --with-gtksourceview"
+
+src_install() {
+	cd ${B}
+	cyginstall ${NAME}docdir="\$(docdir)" icon_DATA=
+
+	for res in 16 32 48 64
+	do
+		insinto /usr/share/icons/hicolor/${res}x${res}/apps
+		newins ${S}/data/${NAME}-${res}.png ${NAME}.png
+	done
+
+	sed -e 's|^Icon=.*|Icon=gmysqlcc|' \
+		-i ${D}/usr/share/applications/${NAME}.desktop
+}
